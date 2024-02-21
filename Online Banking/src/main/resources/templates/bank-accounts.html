@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Accounts</title>
+</head>
+<body>
+    <h1>Bank Accounts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Aadhar Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="bankAccount : ${bankAccounts}">
+                <tr>
+                    <td th:text="${bankAccount.id}"></td>
+                    <td th:text="${bankAccount.name}"></td>
+                    <td th:text="${bankAccount.contact}"></td>
+                    <td th:text="${bankAccount.email}"></td>
+                    <td th:text="${bankAccount.aadharNumber}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>
